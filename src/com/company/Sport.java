@@ -6,9 +6,12 @@ public abstract class Sport {
     public Sport(double zeit){
         this.zeit=zeit;
     }
-
-    public double getZeit(){
+    //Getters und Setters
+    public double getZeit() {
         return zeit;
+    }
+    public void setZeit(double neuZeit) {
+        this.zeit=neuZeit;
     }
 
 }

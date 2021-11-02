@@ -13,17 +13,35 @@ public class Benutzer {
         this.sport=new ArrayList<Sport>();
     }
 
+    //Getters und Setters
+    public String getVorName(){
+        return vorName;
+    }
+    public String getNachName(){
+        return nachName;
+    }
+    public void setVorName(String neuVorName){
+        this.vorName=neuVorName;
+    }
+    public void setNachName(String neuNachName){
+        this.nachName=neuNachName;
+    }
+
+
+    //Neu Sport addieren
     public void neuSport(Sport neuSport){
         sport.add(neuSport);
     }
 
+    //Zeit fuer jedes Sport
     public void kalkuliereZeit(){
-        System.out.println("Zeit fuer jede Sport:");
+        System.out.println("Zeit fuer jedes Sport:");
         for (Sport x:sport) {
             System.out.println(x.getZeit());
         }
     }
 
+    //Zeit fuer ein selbes Sport
     public double kalkulliereZeit(Sport x){
         for (Sport y:sport) {
             if (x == y){
@@ -32,7 +50,7 @@ public class Benutzer {
         }
         return 0;
     }
-
+    //Durchschnitt des Zeit
     public double durchschnittZeit(){
         double sum=0, no=0;
         for (Sport x:sport) {
